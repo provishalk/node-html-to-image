@@ -6,7 +6,8 @@ export default async function handler(req, res) {
       await webshot(
         `<div>${req.body.text}</div>`,
         'public/hello_world.png',
-        { siteType: 'html', quality: 100 }
+        { siteType: 'html', quality: 100 },
+        (err)=>{}
       );
       console.log('Screenshot saved successfully');
       res.status(200).json({ message: 'Screenshot saved successfully' });
