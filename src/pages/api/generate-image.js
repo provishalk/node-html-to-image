@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     try {
       await webshot(
         `<div>${req.body.text}</div>`,
-        'public/hello_world.png',
+        'hello_world.png',
         { siteType: 'html', quality: 100 },
         (err)=>{}
       );
